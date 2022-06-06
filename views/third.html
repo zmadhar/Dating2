@@ -1,0 +1,138 @@
+
+<!--
+name and last name : zahra madhar
+
+class: sdev 328
+
+project: creating a dating website
+
+this file is the second part of the form
+ --->
+
+<style>
+
+  * {
+
+    box-sizing: border-box;
+
+  }
+
+  .container{
+
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+
+    padding: 15px;
+
+    margin: 20px;
+
+  }
+
+
+  table{
+
+    margin: auto;
+
+    width: 100%;
+
+  }
+
+
+  .interests {
+    padding-left: 2em;
+    width: 8em;
+    margin-right: 6em;
+  }
+
+  .type {
+    font-weight: 600;
+    font-size: 1em;
+  }
+  span{
+    color: crimson;
+
+
+  }
+
+</style>
+
+<include href="includes/Navbar.html"></include>
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+  <title>My dating website</title>
+</head>
+<body>
+<div class="container">
+  <form method="POST" action="last">
+  <div class="pfBox">
+    <h1>Interests</h1>
+    <hr/>
+
+    <p class="font-weight-bold">Indoor Interests</p>
+    <div class="row my-2">
+      <repeat group="{{ @indoor}}" value="{{ @indoor }}">
+        <div class="col-sm-3">
+          <div class="form-check">
+
+            <input class="form-check-input" type="checkbox" name="indoor[]" value="{{@indoor}}">
+            <label class="form-check-label">{{@indoor}}</label>
+
+          </div>
+        </div>
+      </repeat>
+    </div>
+
+
+
+
+    <p class="font-weight-bold pt-2">Outdoor Interests</p>
+    <div class="row">
+      <repeat group="{{ @outdoor}}" value="{{ @outdoor }}">
+        <div class="col-sm-3">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="outdoor[]"
+                   value="{{@outdoor}}">
+            <label class="form-check-label">{{@outdoor}}</label>
+          </div>
+        </div>
+      </repeat>
+    </div><!--outdoor interest row ends-->
+
+    <div class="row justify-content-end">
+
+            <div class="col-md-6 d-flex flex-row-reverse">
+
+              <a href="last"><button class="btn btn-primary">Next</button></a>
+
+            </div>
+
+          </div>
+        </div>
+  </form>
+      </div>
+    </form>
+
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+
+
+
